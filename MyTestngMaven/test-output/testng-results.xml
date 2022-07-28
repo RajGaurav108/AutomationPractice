@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-12-12T10:44:20 IST" name="Suite" finished-at="2021-12-12T10:44:20 IST" duration-ms="33">
+    <groups>
+    </groups>
+    <test started-at="2021-12-12T10:44:20 IST" name="Test" finished-at="2021-12-12T10:44:20 IST" duration-ms="33">
+      <class name="com.testng.MyTests">
+        <test-method is-config="true" signature="startReport()[pri:0, instance:com.testng.MyTests@29e495ff]" started-at="2021-12-12T10:44:20 IST" name="startReport" finished-at="2021-12-12T10:44:20 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.testng.MyTests@29e495ff]" started-at="2021-12-12T10:44:20 IST" name="beforeMethod" finished-at="2021-12-12T10:44:20 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="test()[pri:0, instance:com.testng.MyTests@29e495ff]" started-at="2021-12-12T10:44:20 IST" name="test" finished-at="2021-12-12T10:44:20 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.testng.MyTests@29e495ff]" started-at="2021-12-12T10:44:20 IST" name="afterMethod" finished-at="2021-12-12T10:44:20 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.testng.MyTests -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
