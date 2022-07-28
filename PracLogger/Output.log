@@ -1,0 +1,7 @@
+DEBUG - This is Debug message
+INFO - Infor message
+ERROR - Error message
+DEBUG - Add Method: Values passed are -2 and 20
+WARN - Op1 < 0
+DEBUG - Sub Method: Values passed are -2 and 20
+WARN - Op1 < 0
