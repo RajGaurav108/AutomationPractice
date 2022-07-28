@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="methods" name="AutomationSuite" thread-count="3">
+  <test name="TestClasses">
+    <classes>
+      <class name="com.testng.ClassA"/>
+      <class name="com.testng.ClassB"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
