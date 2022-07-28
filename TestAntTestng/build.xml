@@ -1,0 +1,61 @@
+<project>
+
+<property name="build.dir" value="${basedir}/build"/>
+<!-- put testng related jar in the resource folder -->
+<property name="external.jars" value=".\res"/>
+<property name="src.dir" value="${basedir}/src"/>
+
+
+
+<target name="clean">
+<!--echo tag will use to print text on console-->
+<echo message="deleting existing build directory"/>
+<!--delete tag will clean data from given folder-->
+<delete dir="${build.dir}"/>
+</target>
+
+<target name="setClassPath">
+<path id="classpath_jars">
+<pathelement path="${basedir}/"/>
+<fileset dir="${external.jars}" includes="*.jar"/>
+
+</path>
+<pathconvert pathsep=";" property="test.classpath" refid="classpath_jars"/>
+</target>
+
+<target name="loadTestNG" depends="setClassPath">
+<taskdef resource="testngtasks" classpath="${test.classpath}"/>
+</target>
+
+
+<target name="compile" depends="clean,setClassPath,loadTestNG">
+<echo message="classpath:${test.classpath}"/>
+<echo message="compiling.........."/>
+<!--mkdir tag will create new director-->
+<mkdir dir="${build.dir}"/>
+<echo message="classpath:${test.classpath}"/>
+<echo message="compiling.........."/>
+<!--javac tag used to compile java source code and move .class files to new folder-->
+
+<javac srcdir="${src.dir}" destdir="${build.dir}">
+<classpath refid="classpath_jars"/>
+</javac>
+</target>
+
+<target name="runTestNGAnt" depends="compile">
+<!-- testng tag will be used to execute testng code using corresponding testng.xml file -->
+<testng classpath="${test.classpath};${build.dir}">
+<xmlfileset dir="${basedir}" includes="testng.xml"/>
+</testng>
+</target>
+
+
+<target name="testTestNG" depends="setClassPath">
+<taskdef resource="testngtasks" classpath=".\resource\testng-7.4.0.jar"/>
+<testng classpath="${test.classpath};${build.dir}">
+<xmlfileset dir="${basedir}" includes="testng.xml"/>
+</testng>
+</target>
+
+
+</project>
